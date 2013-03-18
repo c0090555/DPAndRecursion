@@ -63,7 +63,7 @@ public class CombinationSumII {
 		if (index == num.length) {
 			return;
 		}
-		ArrayList<Integer> cp = (ArrayList<Integer>) comb.clone();
+		ArrayList<Integer> cp = new ArrayList<Integer>(comb);
 		combinationSum2Helper(num, index + 1, target, cp, res, hash);// without
 		// num[index]
 
