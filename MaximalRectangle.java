@@ -64,18 +64,14 @@ public class MaximalRectangle {
 		int rx = x;// right x
 		int ry = ly + newMatrix[lx][ly] - 1;// right y
 		int area = (rx - lx + 1) * (ry - ly + 1);
-		while (rx < m - 1 && newMatrix[rx][ly] >= 1) {// go down and stop to the
-														// second last line or
-														// reach a '0'
+		while (rx < m - 1 && newMatrix[rx][ly] >= 1) {// go down and stop to the second last line or reach a '0'
 			area = Math.max(area, (rx - lx + 1) * (ry - ly + 1));
 			rx++;// update rx
 			ry = Math.min(ry, ly + newMatrix[rx][ly] - 1);// update ry
 
 		}
 		if (newMatrix[rx][ly] >= 1) {
-			area = Math.max(area, (rx - lx + 1) * (ry - ly + 1));// update for
-																	// the last
-																	// line
+			area = Math.max(area, (rx - lx + 1) * (ry - ly + 1));// update for the last line
 		}
 		return area;
 	}
