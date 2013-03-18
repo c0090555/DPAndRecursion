@@ -14,7 +14,7 @@ package DPandRecursion;
 
  typical dp
  
- if dp[i-1][j]&&s1[i-1]=s3[i-1+j] || dp[i][j-1]&&s2[j-1]==s3[i+1-j] then dp[i][j]=true
+ if dp[i-1][j]&&s1[i-1]=s3[i-1+j] || dp[i][j-1]&&s2[j-1]==s3[i+j-1] then dp[i][j]=true
  else dp[i][j]=false
  */
 
