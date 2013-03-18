@@ -35,7 +35,7 @@ public class ClimbingStairs {
 			return 0;
 		} else {
 			int sum = climbStairs(n - 1) + climbStairs(n - 2);
-			if (!hash.containsKey(sum)) {
+			if (!hash.containsKey(n)) {
 				hash.put(n, sum);
 			}
 			return sum;
