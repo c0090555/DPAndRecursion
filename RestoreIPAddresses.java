@@ -15,7 +15,7 @@ public class RestoreIPAddresses {
 		// Start typing your Java solution below
 		// DO NOT write main() function
 		ArrayList<String> result = new ArrayList<String>();
-		if (s.length() < 4 || s.length() > 16) {
+		if (s.length() < 4 || s.length() > 12) {
 			return result;
 		}
 		for (int i = 1; i <= s.length(); i++) {
