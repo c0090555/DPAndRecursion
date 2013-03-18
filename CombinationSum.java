@@ -45,7 +45,7 @@ public class CombinationSum {
 		if (target < 0)// base case
 			return;
 		if (target == 0) {// base case
-			ArrayList<Integer> cp = (ArrayList<Integer>) comb.clone();
+			ArrayList<Integer> cp = new ArrayList<Integer>(comb);
 //			System.out.println("res " + cp);
 			res.add(cp);
 			return;
@@ -53,7 +53,7 @@ public class CombinationSum {
 		if (index == candidates.length) // base case
 			return;
 		
-		ArrayList<Integer> cp = (ArrayList<Integer>) comb.clone();//for each level, we need a copy of comb
+		ArrayList<Integer> cp = new ArrayList<Integer>(comb);//for each level, we need a copy of comb
 		for (int i = 1; target - i * candidates[index] >= 0; i++) {// with
 			cp.add(candidates[index]);
 			combinationSumHelper(candidates, index + 1, target - i
